@@ -27,7 +27,3 @@ func readMember(reader *ClassReader, cp ConstantPool) *MemberInfo {
 		attributes:      readAttributes(reader, cp),
 	}
 }
-
-func readConstantInfo(reader *ClassReader, pools ConstantPool) ConstantInfo {
-
-}
