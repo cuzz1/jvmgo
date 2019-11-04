@@ -12,10 +12,11 @@ func main() {
 	cmd := &Cmd{
 		helpFlag:    false,
 		versionFlag: false,
-		cpOption:    "",
-		XjreOption:  `/usr/local/lib/jdk1.8/jre`,
-		// XjreOption:  `C:\Program Files\Java\jdk1.8.0_131\jre`,
-		class: "java.lang.String",
+		cpOption:    `C:\Users\cuzz\go\src\jvmgo\ch03`,
+		// XjreOption:  `/usr/local/lib/jdk1.8/jre`,
+		XjreOption: `C:\Program Files\Java\jdk1.8.0_131\jre`,
+		// class: "java.lang.String",
+		class: "Test",
 		args:  nil,
 	}
 	if cmd.versionFlag {
@@ -39,7 +40,11 @@ func startJVM(cmd *Cmd) {
 		fmt.Printf("Could not find or load main class %s\n", cmd.class)
 		return
 	}
-	fmt.Printf("class data:%v\n", classData)
+	for _, b := range classData {
+
+		fmt.Printf("%X ", b)
+	}
+	fmt.Println()
 
 	cf := loadClass(className, cp)
 	fmt.Println(cmd.class)
