@@ -15,9 +15,9 @@ func main() {
 		cpOption:    `C:\Users\cuzz\go\src\jvmgo\ch03`,
 		// XjreOption:  `/usr/local/lib/jdk1.8/jre`,
 		XjreOption: `C:\Program Files\Java\jdk1.8.0_131\jre`,
-		// class: "java.lang.String",
-		class: "Test",
-		args:  nil,
+		class:      "java.lang.String",
+		// class: "Test",
+		args: nil,
 	}
 	if cmd.versionFlag {
 		fmt.Println("version 0.0.1")
