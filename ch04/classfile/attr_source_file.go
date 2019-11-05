@@ -1,6 +1,6 @@
 package classfile
 
-// SourceFile: "ClassFileTest.java"
+// SourceFile: "ClassFileTest.java.java"
 type SourceFileAttribute struct {
 	cp              ConstantPool
 	sourceFileIndex uint16

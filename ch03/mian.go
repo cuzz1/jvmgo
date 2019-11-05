@@ -29,7 +29,7 @@ func main() {
 }
 
 func startJVM(cmd *Cmd) {
-	// 获取 ClassPath
+	// 获取 Classpath
 	cp := classpath.Parse(cmd.XjreOption, cmd.cpOption)
 	fmt.Printf("classpath:%v class:%v args:%v\n", cp, cmd.class, cmd.args)
 
