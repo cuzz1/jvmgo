@@ -1,10 +1,20 @@
 package rtda
 
+import "jvmgo/ch06/rtda/heap"
+
+/*
+JVM
+  Thread
+    pc
+    Stack
+      Frame
+        LocalVars
+        OperandStack
+*/
 type Thread struct {
-	// 寄存器（Program Counter）
-	pc int
-	// Java 虚拟机栈指针
+	pc    int // the address of the instruction currently being executed
 	stack *Stack
+	// todo
 }
 
 func NewThread() *Thread {
@@ -31,6 +41,6 @@ func (self *Thread) CurrentFrame() *Frame {
 	return self.stack.top()
 }
 
-func (self *Thread) NewFrame(maxLocals, maxStack uint) *Frame {
-	return newFrame(self, maxLocals, maxStack)
+func (self *Thread) NewFrame(method *heap.Method) *Frame {
+	return newFrame(self, method)
 }

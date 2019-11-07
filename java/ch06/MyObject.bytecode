@@ -1,0 +1,102 @@
+Classfile /C:/Users/cuzz/go/src/jvmgo/java/ch06/MyObject.class
+  Last modified 2019-11-7; size 456 bytes
+  MD5 checksum 0c5aea22ed516a7b308fc9bd968f018f
+  Compiled from "MyObject.java"
+public class MyObject
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#22         // java/lang/Object."<init>":()V
+   #2 = Integer            32768
+   #3 = Class              #23            // MyObject
+   #4 = Methodref          #3.#22         // MyObject."<init>":()V
+   #5 = Fieldref           #3.#24         // MyObject.staticVar:I
+   #6 = Fieldref           #3.#25         // MyObject.instanceVar:I
+   #7 = Class              #26            // java/lang/Object
+   #8 = Utf8               staticVar
+   #9 = Utf8               I
+  #10 = Utf8               instanceVar
+  #11 = Utf8               <init>
+  #12 = Utf8               ()V
+  #13 = Utf8               Code
+  #14 = Utf8               LineNumberTable
+  #15 = Utf8               main
+  #16 = Utf8               ([Ljava/lang/String;)V
+  #17 = Utf8               StackMapTable
+  #18 = Class              #23            // MyObject
+  #19 = Class              #26            // java/lang/Object
+  #20 = Utf8               SourceFile
+  #21 = Utf8               MyObject.java
+  #22 = NameAndType        #11:#12        // "<init>":()V
+  #23 = Utf8               MyObject
+  #24 = NameAndType        #8:#9          // staticVar:I
+  #25 = NameAndType        #10:#9         // instanceVar:I
+  #26 = Utf8               java/lang/Object
+{
+  public static int staticVar;
+    descriptor: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public int instanceVar;
+    descriptor: I
+    flags: ACC_PUBLIC
+
+  public MyObject();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 2: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=4, args_size=1
+         0: ldc           #2                  // int 32768
+         2: istore_1
+         3: new           #3                  // class MyObject
+         6: dup
+         7: invokespecial #4                  // Method "<init>":()V
+        10: astore_2
+        11: iload_1
+        12: putstatic     #5                  // Field staticVar:I
+        15: getstatic     #5                  // Field staticVar:I
+        18: istore_1
+        19: aload_2
+        20: iload_1
+        21: putfield      #6                  // Field instanceVar:I
+        24: aload_2
+        25: getfield      #6                  // Field instanceVar:I
+        28: istore_1
+        29: aload_2
+        30: astore_3
+        31: aload_3
+        32: instanceof    #3                  // class MyObject
+        35: ifeq          43
+        38: aload_3
+        39: checkcast     #3                  // class MyObject
+        42: astore_2
+        43: return
+      LineNumberTable:
+        line 6: 0
+        line 7: 3
+        line 8: 11
+        line 9: 15
+        line 10: 19
+        line 11: 24
+        line 12: 29
+        line 13: 31
+        line 14: 38
+        line 16: 43
+      StackMapTable: number_of_entries = 1
+        frame_type = 254 /* append */
+          offset_delta = 43
+          locals = [ int, class MyObject, class java/lang/Object ]
+}
+SourceFile: "MyObject.java"

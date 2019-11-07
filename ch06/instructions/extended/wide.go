@@ -1,10 +1,10 @@
 package extended
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/instructions/loads"
-import "jvmgo/ch05/instructions/math"
-import "jvmgo/ch05/instructions/stores"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/instructions/loads"
+import "jvmgo/ch06/instructions/math"
+import "jvmgo/ch06/instructions/stores"
+import "jvmgo/ch06/rtda"
 
 // Extend local variable index by additional bytes
 type WIDE struct {
