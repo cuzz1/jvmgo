@@ -1,0 +1,72 @@
+Classfile /C:/Users/cuzz/go/src/jvmgo/java/ch07/FibonacciTest.class
+  Last modified 2019-11-8; size 549 bytes
+  MD5 checksum 423394c7e6278ff84ea7fd8134173f72
+  Compiled from "FibonacciTest.java"
+public class FibonacciTest
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #10.#22        // java/lang/Object."<init>":()V
+   #2 = Long               30l
+   #4 = Methodref          #9.#23         // FibonacciTest.fibonacci:(J)J
+   #5 = Fieldref           #24.#25        // java/lang/System.out:Ljava/io/PrintStream;
+   #6 = Methodref          #26.#27        // java/io/PrintStream.println:(J)V
+   #7 = Long               2l
+   #9 = Class              #28            // FibonacciTest
+  #10 = Class              #29            // java/lang/Object
+  #11 = Utf8               <init>
+  #12 = Utf8               ()V
+  #13 = Utf8               Code
+  #14 = Utf8               LineNumberTable
+  #15 = Utf8               main
+  #16 = Utf8               ([Ljava/lang/String;)V
+  #17 = Utf8               fibonacci
+  #18 = Utf8               (J)J
+  #19 = Utf8               StackMapTable
+  #20 = Utf8               SourceFile
+  #21 = Utf8               FibonacciTest.java
+  #22 = NameAndType        #11:#12        // "<init>":()V
+  #23 = NameAndType        #17:#18        // fibonacci:(J)J
+  #24 = Class              #30            // java/lang/System
+  #25 = NameAndType        #31:#32        // out:Ljava/io/PrintStream;
+  #26 = Class              #33            // java/io/PrintStream
+  #27 = NameAndType        #34:#35        // println:(J)V
+  #28 = Utf8               FibonacciTest
+  #29 = Utf8               java/lang/Object
+  #30 = Utf8               java/lang/System
+  #31 = Utf8               out
+  #32 = Utf8               Ljava/io/PrintStream;
+  #33 = Utf8               java/io/PrintStream
+  #34 = Utf8               println
+  #35 = Utf8               (J)V
+{
+  public FibonacciTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=1
+         0: ldc2_w        #2                  // long 30l
+         3: invokestatic  #4                  // Method fibonacci:(J)J
+         6: lstore_1
+         7: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        10: lload_1
+        11: invokevirtual #6                  // Method java/io/PrintStream.println:(J)V
+        14: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 7
+        line 5: 14
+}
+SourceFile: "FibonacciTest.java"
