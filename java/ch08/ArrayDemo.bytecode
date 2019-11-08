@@ -1,0 +1,88 @@
+Classfile /C:/Users/cuzz/go/src/jvmgo/java/ch08/ArrayDemo.class
+  Last modified 2019-11-8; size 379 bytes
+  MD5 checksum d64a2791fd674fe6084bc9a355b859f3
+  Compiled from "ArrayDemo.java"
+public class ArrayDemo
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#15         // java/lang/Object."<init>":()V
+   #2 = Class              #16            // java/lang/String
+   #3 = Class              #17            // "[[I"
+   #4 = String             #18            // abc
+   #5 = Class              #19            // ArrayDemo
+   #6 = Class              #20            // java/lang/Object
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               main
+  #12 = Utf8               ([Ljava/lang/String;)V
+  #13 = Utf8               SourceFile
+  #14 = Utf8               ArrayDemo.java
+  #15 = NameAndType        #7:#8          // "<init>":()V
+  #16 = Utf8               java/lang/String
+  #17 = Utf8               [[I
+  #18 = Utf8               abc
+  #19 = Utf8               ArrayDemo
+  #20 = Utf8               java/lang/Object
+{
+  public ArrayDemo();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=7, args_size=1
+         0: bipush        10
+         2: newarray       int
+         4: astore_1
+         5: bipush        10
+         7: anewarray     #2                  // class java/lang/String
+        10: astore_2
+        11: bipush        10
+        13: bipush        10
+        15: multianewarray #3,  2             // class "[[I"
+        19: astore_3
+        20: aload_1
+        21: arraylength
+        22: istore        4
+        24: aload_1
+        25: iconst_0
+        26: bipush        100
+        28: iastore
+        29: aload_1
+        30: iconst_0
+        31: iaload
+        32: istore        5
+        34: aload_2
+        35: iconst_0
+        36: ldc           #4                  // String abc
+        38: aastore
+        39: aload_2
+        40: iconst_0
+        41: aaload
+        42: astore        6
+        44: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 5
+        line 5: 11
+        line 6: 20
+        line 7: 24
+        line 8: 29
+        line 9: 34
+        line 10: 39
+        line 11: 44
+}
+SourceFile: "ArrayDemo.java"

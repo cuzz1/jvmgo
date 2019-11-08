@@ -1,0 +1,141 @@
+Classfile /C:/Users/cuzz/go/src/jvmgo/java/ch08/BubbleSortTest.class
+  Last modified 2019-11-8; size 862 bytes
+  MD5 checksum 375ff67a8336642ab6d0b5f82f9405ef
+  Compiled from "BubbleSortTest.java"
+public class BubbleSortTest
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#21         // java/lang/Object."<init>":()V
+   #2 = Methodref          #6.#22         // BubbleSortTest.bubbleSort:([I)V
+   #3 = Methodref          #6.#23         // BubbleSortTest.printArray:([I)V
+   #4 = Fieldref           #24.#25        // java/lang/System.out:Ljava/io/PrintStream;
+   #5 = Methodref          #26.#27        // java/io/PrintStream.println:(I)V
+   #6 = Class              #28            // BubbleSortTest
+   #7 = Class              #29            // java/lang/Object
+   #8 = Utf8               <init>
+   #9 = Utf8               ()V
+  #10 = Utf8               Code
+  #11 = Utf8               LineNumberTable
+  #12 = Utf8               main
+  #13 = Utf8               ([Ljava/lang/String;)V
+  #14 = Utf8               bubbleSort
+  #15 = Utf8               ([I)V
+  #16 = Utf8               StackMapTable
+  #17 = Utf8               printArray
+  #18 = Class              #30            // "[I"
+  #19 = Utf8               SourceFile
+  #20 = Utf8               BubbleSortTest.java
+  #21 = NameAndType        #8:#9          // "<init>":()V
+  #22 = NameAndType        #14:#15        // bubbleSort:([I)V
+  #23 = NameAndType        #17:#15        // printArray:([I)V
+  #24 = Class              #31            // java/lang/System
+  #25 = NameAndType        #32:#33        // out:Ljava/io/PrintStream;
+  #26 = Class              #34            // java/io/PrintStream
+  #27 = NameAndType        #35:#36        // println:(I)V
+  #28 = Utf8               BubbleSortTest
+  #29 = Utf8               java/lang/Object
+  #30 = Utf8               [I
+  #31 = Utf8               java/lang/System
+  #32 = Utf8               out
+  #33 = Utf8               Ljava/io/PrintStream;
+  #34 = Utf8               java/io/PrintStream
+  #35 = Utf8               println
+  #36 = Utf8               (I)V
+{
+  public BubbleSortTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=2, args_size=1
+         0: bipush        16
+         2: newarray       int
+         4: dup
+         5: iconst_0
+         6: bipush        22
+         8: iastore
+         9: dup
+        10: iconst_1
+        11: bipush        84
+        13: iastore
+        14: dup
+        15: iconst_2
+        16: bipush        77
+        18: iastore
+        19: dup
+        20: iconst_3
+        21: bipush        11
+        23: iastore
+        24: dup
+        25: iconst_4
+        26: bipush        95
+        28: iastore
+        29: dup
+        30: iconst_5
+        31: bipush        9
+        33: iastore
+        34: dup
+        35: bipush        6
+        37: bipush        78
+        39: iastore
+        40: dup
+        41: bipush        7
+        43: bipush        56
+        45: iastore
+        46: dup
+        47: bipush        8
+        49: bipush        36
+        51: iastore
+        52: dup
+        53: bipush        9
+        55: bipush        97
+        57: iastore
+        58: dup
+        59: bipush        10
+        61: bipush        65
+        63: iastore
+        64: dup
+        65: bipush        11
+        67: bipush        36
+        69: iastore
+        70: dup
+        71: bipush        12
+        73: bipush        10
+        75: iastore
+        76: dup
+        77: bipush        13
+        79: bipush        24
+        81: iastore
+        82: dup
+        83: bipush        14
+        85: bipush        92
+        87: iastore
+        88: dup
+        89: bipush        15
+        91: bipush        48
+        93: iastore
+        94: astore_1
+        95: aload_1
+        96: invokestatic  #2                  // Method bubbleSort:([I)V
+        99: aload_1
+       100: invokestatic  #3                  // Method printArray:([I)V
+       103: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 95
+        line 5: 99
+        line 6: 103
+}
+SourceFile: "BubbleSortTest.java"
