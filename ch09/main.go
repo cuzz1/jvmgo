@@ -16,7 +16,7 @@ func main() {
 		// XjreOption:  `/usr/local/lib/jdk1.8/jre`,
 		XjreOption: `C:\Program Files\Java\jdk1.8.0_131\jre`,
 		//class:      "java.lang.String",
-		class: "GetClassTest",
+		class: "StringTest",
 		args:  nil,
 	}
 	if cmd.versionFlag {
