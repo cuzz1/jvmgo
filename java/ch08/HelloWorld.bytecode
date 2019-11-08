@@ -1,0 +1,88 @@
+Classfile /C:/Users/cuzz/go/src/jvmgo/java/ch08/HelloWorld.class
+  Last modified 2019-11-8; size 499 bytes
+  MD5 checksum ed3291df1edba788dd434af7ded687bc
+  Compiled from "HelloWorld.java"
+public class HelloWorld
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#16         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #17.#18        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = Methodref          #19.#20        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #4 = Class              #21            // HelloWorld
+   #5 = Class              #22            // java/lang/Object
+   #6 = Utf8               <init>
+   #7 = Utf8               ()V
+   #8 = Utf8               Code
+   #9 = Utf8               LineNumberTable
+  #10 = Utf8               main
+  #11 = Utf8               ([Ljava/lang/String;)V
+  #12 = Utf8               StackMapTable
+  #13 = Class              #23            // "[Ljava/lang/String;"
+  #14 = Utf8               SourceFile
+  #15 = Utf8               HelloWorld.java
+  #16 = NameAndType        #6:#7          // "<init>":()V
+  #17 = Class              #24            // java/lang/System
+  #18 = NameAndType        #25:#26        // out:Ljava/io/PrintStream;
+  #19 = Class              #27            // java/io/PrintStream
+  #20 = NameAndType        #28:#29        // println:(Ljava/lang/String;)V
+  #21 = Utf8               HelloWorld
+  #22 = Utf8               java/lang/Object
+  #23 = Utf8               [Ljava/lang/String;
+  #24 = Utf8               java/lang/System
+  #25 = Utf8               out
+  #26 = Utf8               Ljava/io/PrintStream;
+  #27 = Utf8               java/io/PrintStream
+  #28 = Utf8               println
+  #29 = Utf8               (Ljava/lang/String;)V
+{
+  public HelloWorld();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 2: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=5, args_size=1
+         0: aload_0
+         1: astore_1
+         2: aload_1
+         3: arraylength
+         4: istore_2
+         5: iconst_0
+         6: istore_3
+         7: iload_3
+         8: iload_2
+         9: if_icmpge     31
+        12: aload_1
+        13: iload_3
+        14: aaload
+        15: astore        4
+        17: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        20: aload         4
+        22: invokevirtual #3                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        25: iinc          3, 1
+        28: goto          7
+        31: return
+      LineNumberTable:
+        line 4: 0
+        line 5: 17
+        line 4: 25
+        line 7: 31
+      StackMapTable: number_of_entries = 2
+        frame_type = 254 /* append */
+          offset_delta = 7
+          locals = [ class "[Ljava/lang/String;", int, int ]
+        frame_type = 248 /* chop */
+          offset_delta = 23
+}
+SourceFile: "HelloWorld.java"

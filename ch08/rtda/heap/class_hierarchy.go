@@ -91,12 +91,3 @@ func (self *Class) IsSuperClassOf(other *Class) bool {
 func (self *Class) isSuperInterfaceOf(iface *Class) bool {
 	return iface.isSubInterfaceOf(self)
 }
-func (self *Class) isJlObject() bool {
-	return self.name == "java/lang/Object"
-}
-func (self *Class) isJlCloneable() bool {
-	return self.name == "java/lang/Cloneable"
-}
-func (self *Class) isJioSerializable() bool {
-	return self.name == "java/io/Serializable"
-}

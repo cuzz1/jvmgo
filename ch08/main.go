@@ -16,8 +16,8 @@ func main() {
 		// XjreOption:  `/usr/local/lib/jdk1.8/jre`,
 		XjreOption: `C:\Program Files\Java\jdk1.8.0_131\jre`,
 		//class:      "java.lang.String",
-		class: "BubbleSortTest",
-		args:  nil,
+		class: "HelloWorld",
+		args:  []string{"hello, world", "你好, 世界"},
 	}
 	if cmd.versionFlag {
 		fmt.Println("version 0.0.1")
@@ -36,7 +36,7 @@ func startJVM(cmd *Cmd) {
 	mainClass := classLoader.LoadClass(className)         // 加载类
 	mainMethod := mainClass.GetMainMethod()
 	if mainMethod != nil {
-		interpret(mainMethod, cmd.verboseInstFlag)
+		interpret(mainMethod, cmd.verboseInstFlag, cmd.args)
 	} else {
 		fmt.Printf("Main method not found in class %s\n", cmd.class)
 	}
