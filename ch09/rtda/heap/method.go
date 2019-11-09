@@ -1,13 +1,15 @@
 package heap
 
-import "jvmgo/ch09/classfile"
+import "jvmgo/ch10/classfile"
 
 type Method struct {
 	ClassMember
-	maxStack     uint
-	maxLocals    uint
-	code         []byte
-	argSlotCount uint
+	maxStack        uint
+	maxLocals       uint
+	code            []byte
+	exceptionTable  ExceptionTable
+	lineNumberTable *classfile.LineNumberTableAttribute
+	argSlotCount    uint
 }
 
 func newMethods(class *Class, cfMethods []*classfile.MemberInfo) []*Method {
@@ -25,7 +27,6 @@ func newMethod(class *Class, cfMethod *classfile.MemberInfo) *Method {
 	method.copyAttributes(cfMethod)
 	md := parseMethodDescriptor(method.descriptor)
 	method.calcArgSlotCount(md.parameterTypes)
-	// 如果是本地方法
 	if method.IsNative() {
 		method.injectCodeAttribute(md.returnType)
 	}
@@ -37,6 +38,9 @@ func (self *Method) copyAttributes(cfMethod *classfile.MemberInfo) {
 		self.maxStack = codeAttr.MaxStack()
 		self.maxLocals = codeAttr.MaxLocals()
 		self.code = codeAttr.Code()
+		self.lineNumberTable = codeAttr.LineNumberTableAttribute()
+		self.exceptionTable = newExceptionTable(codeAttr.ExceptionTable(),
+			self.class.constantPool)
 	}
 }
 
@@ -52,7 +56,6 @@ func (self *Method) calcArgSlotCount(paramTypes []string) {
 	}
 }
 
-// 本地方法在class中没有code属性
 func (self *Method) injectCodeAttribute(returnType string) {
 	self.maxStack = 4 // todo
 	self.maxLocals = self.argSlotCount
@@ -103,4 +106,22 @@ func (self *Method) Code() []byte {
 }
 func (self *Method) ArgSlotCount() uint {
 	return self.argSlotCount
+}
+
+func (self *Method) FindExceptionHandler(exClass *Class, pc int) int {
+	handler := self.exceptionTable.findExceptionHandler(exClass, pc)
+	if handler != nil {
+		return handler.handlerPc
+	}
+	return -1
+}
+
+func (self *Method) GetLineNumber(pc int) int {
+	if self.IsNative() {
+		return -2
+	}
+	if self.lineNumberTable == nil {
+		return -1
+	}
+	return self.lineNumberTable.GetLineNumber(pc)
 }

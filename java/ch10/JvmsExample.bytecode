@@ -1,0 +1,264 @@
+Classfile /home/cuzz/go/src/jvmgo/java/ch10/JvmsExample.class
+  Last modified Nov 9, 2019; size 1413 bytes
+  MD5 checksum db674dda95a8f2599c5eeb89bae9b6e0
+  Compiled from "JvmsExample.java"
+public class jvmgo.book.ch10.JvmsExample
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #15.#44        // java/lang/Object."<init>":()V
+   #2 = Class              #45            // jvmgo/book/ch10/JvmsExample$TestExc
+   #3 = Methodref          #2.#44         // jvmgo/book/ch10/JvmsExample$TestExc."<init>":()V
+   #4 = Methodref          #10.#46        // jvmgo/book/ch10/JvmsExample.tryItOut:()V
+   #5 = Methodref          #10.#47        // jvmgo/book/ch10/JvmsExample.handleExc:(Ljava/lang/RuntimeException;)V
+   #6 = Class              #48            // jvmgo/book/ch10/JvmsExample$TestExc1
+   #7 = Class              #49            // jvmgo/book/ch10/JvmsExample$TestExc2
+   #8 = Methodref          #10.#50        // jvmgo/book/ch10/JvmsExample.handleExc1:(Ljvmgo/book/ch10/JvmsExample$TestExc1;)V
+   #9 = Methodref          #10.#51        // jvmgo/book/ch10/JvmsExample.handleExc2:(Ljvmgo/book/ch10/JvmsExample$TestExc2;)V
+  #10 = Class              #52            // jvmgo/book/ch10/JvmsExample
+  #11 = Methodref          #10.#44        // jvmgo/book/ch10/JvmsExample."<init>":()V
+  #12 = Methodref          #10.#53        // jvmgo/book/ch10/JvmsExample.catchOne:()V
+  #13 = Methodref          #10.#54        // jvmgo/book/ch10/JvmsExample.catchTwo:()V
+  #14 = Methodref          #10.#55        // jvmgo/book/ch10/JvmsExample.nestedCatch:()V
+  #15 = Class              #56            // java/lang/Object
+  #16 = Utf8               TestExc2
+  #17 = Utf8               InnerClasses
+  #18 = Utf8               TestExc1
+  #19 = Utf8               TestExc
+  #20 = Utf8               <init>
+  #21 = Utf8               ()V
+  #22 = Utf8               Code
+  #23 = Utf8               LineNumberTable
+  #24 = Utf8               cantBeZero
+  #25 = Utf8               (I)V
+  #26 = Utf8               StackMapTable
+  #27 = Utf8               catchOne
+  #28 = Class              #45            // jvmgo/book/ch10/JvmsExample$TestExc
+  #29 = Utf8               catchTwo
+  #30 = Class              #48            // jvmgo/book/ch10/JvmsExample$TestExc1
+  #31 = Class              #49            // jvmgo/book/ch10/JvmsExample$TestExc2
+  #32 = Utf8               nestedCatch
+  #33 = Utf8               tryItOut
+  #34 = Utf8               handleExc
+  #35 = Utf8               (Ljava/lang/RuntimeException;)V
+  #36 = Utf8               handleExc1
+  #37 = Utf8               (Ljvmgo/book/ch10/JvmsExample$TestExc1;)V
+  #38 = Utf8               handleExc2
+  #39 = Utf8               (Ljvmgo/book/ch10/JvmsExample$TestExc2;)V
+  #40 = Utf8               main
+  #41 = Utf8               ([Ljava/lang/String;)V
+  #42 = Utf8               SourceFile
+  #43 = Utf8               JvmsExample.java
+  #44 = NameAndType        #20:#21        // "<init>":()V
+  #45 = Utf8               jvmgo/book/ch10/JvmsExample$TestExc
+  #46 = NameAndType        #33:#21        // tryItOut:()V
+  #47 = NameAndType        #34:#35        // handleExc:(Ljava/lang/RuntimeException;)V
+  #48 = Utf8               jvmgo/book/ch10/JvmsExample$TestExc1
+  #49 = Utf8               jvmgo/book/ch10/JvmsExample$TestExc2
+  #50 = NameAndType        #36:#37        // handleExc1:(Ljvmgo/book/ch10/JvmsExample$TestExc1;)V
+  #51 = NameAndType        #38:#39        // handleExc2:(Ljvmgo/book/ch10/JvmsExample$TestExc2;)V
+  #52 = Utf8               jvmgo/book/ch10/JvmsExample
+  #53 = NameAndType        #27:#21        // catchOne:()V
+  #54 = NameAndType        #29:#21        // catchTwo:()V
+  #55 = NameAndType        #32:#21        // nestedCatch:()V
+  #56 = Utf8               java/lang/Object
+{
+  public jvmgo.book.ch10.JvmsExample();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+
+  void cantBeZero(int);
+    descriptor: (I)V
+    flags:
+    Code:
+      stack=2, locals=2, args_size=2
+         0: iload_1
+         1: ifne          12
+         4: new           #2                  // class jvmgo/book/ch10/JvmsExample$TestExc
+         7: dup
+         8: invokespecial #3                  // Method jvmgo/book/ch10/JvmsExample$TestExc."<init>":()V
+        11: athrow
+        12: return
+      LineNumberTable:
+        line 10: 0
+        line 11: 4
+        line 13: 12
+      StackMapTable: number_of_entries = 1
+        frame_type = 12 /* same */
+
+  void catchOne();
+    descriptor: ()V
+    flags:
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aload_0
+         1: invokevirtual #4                  // Method tryItOut:()V
+         4: goto          13
+         7: astore_1
+         8: aload_0
+         9: aload_1
+        10: invokevirtual #5                  // Method handleExc:(Ljava/lang/RuntimeException;)V
+        13: return
+      Exception table:
+         from    to  target type
+             0     4     7   Class jvmgo/book/ch10/JvmsExample$TestExc
+      LineNumberTable:
+        line 17: 0
+        line 20: 4
+        line 18: 7
+        line 19: 8
+        line 21: 13
+      StackMapTable: number_of_entries = 2
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class jvmgo/book/ch10/JvmsExample$TestExc ]
+        frame_type = 5 /* same */
+
+  void catchTwo();
+    descriptor: ()V
+    flags:
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aload_0
+         1: invokevirtual #4                  // Method tryItOut:()V
+         4: goto          22
+         7: astore_1
+         8: aload_0
+         9: aload_1
+        10: invokevirtual #5                  // Method handleExc:(Ljava/lang/RuntimeException;)V
+        13: goto          22
+        16: astore_1
+        17: aload_0
+        18: aload_1
+        19: invokevirtual #5                  // Method handleExc:(Ljava/lang/RuntimeException;)V
+        22: return
+      Exception table:
+         from    to  target type
+             0     4     7   Class jvmgo/book/ch10/JvmsExample$TestExc1
+             0     4    16   Class jvmgo/book/ch10/JvmsExample$TestExc2
+      LineNumberTable:
+        line 25: 0
+        line 30: 4
+        line 26: 7
+        line 27: 8
+        line 30: 13
+        line 28: 16
+        line 29: 17
+        line 31: 22
+      StackMapTable: number_of_entries = 3
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class jvmgo/book/ch10/JvmsExample$TestExc1 ]
+        frame_type = 72 /* same_locals_1_stack_item */
+          stack = [ class jvmgo/book/ch10/JvmsExample$TestExc2 ]
+        frame_type = 5 /* same */
+
+  void nestedCatch();
+    descriptor: ()V
+    flags:
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aload_0
+         1: invokevirtual #4                  // Method tryItOut:()V
+         4: goto          13
+         7: astore_1
+         8: aload_0
+         9: aload_1
+        10: invokevirtual #8                  // Method handleExc1:(Ljvmgo/book/ch10/JvmsExample$TestExc1;)V
+        13: goto          22
+        16: astore_1
+        17: aload_0
+        18: aload_1
+        19: invokevirtual #9                  // Method handleExc2:(Ljvmgo/book/ch10/JvmsExample$TestExc2;)V
+        22: return
+      Exception table:
+         from    to  target type
+             0     4     7   Class jvmgo/book/ch10/JvmsExample$TestExc1
+             0    13    16   Class jvmgo/book/ch10/JvmsExample$TestExc2
+      LineNumberTable:
+        line 36: 0
+        line 39: 4
+        line 37: 7
+        line 38: 8
+        line 42: 13
+        line 40: 16
+        line 41: 17
+        line 43: 22
+      StackMapTable: number_of_entries = 4
+        frame_type = 71 /* same_locals_1_stack_item */
+          stack = [ class jvmgo/book/ch10/JvmsExample$TestExc1 ]
+        frame_type = 5 /* same */
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class jvmgo/book/ch10/JvmsExample$TestExc2 ]
+        frame_type = 5 /* same */
+
+  void tryItOut();
+    descriptor: ()V
+    flags:
+    Code:
+      stack=0, locals=1, args_size=1
+         0: return
+      LineNumberTable:
+        line 47: 0
+
+  void handleExc(java.lang.RuntimeException);
+    descriptor: (Ljava/lang/RuntimeException;)V
+    flags:
+    Code:
+      stack=0, locals=2, args_size=2
+         0: return
+      LineNumberTable:
+        line 51: 0
+
+  void handleExc1(jvmgo.book.ch10.JvmsExample$TestExc1);
+    descriptor: (Ljvmgo/book/ch10/JvmsExample$TestExc1;)V
+    flags:
+    Code:
+      stack=0, locals=2, args_size=2
+         0: return
+      LineNumberTable:
+        line 54: 0
+
+  void handleExc2(jvmgo.book.ch10.JvmsExample$TestExc2);
+    descriptor: (Ljvmgo/book/ch10/JvmsExample$TestExc2;)V
+    flags:
+    Code:
+      stack=0, locals=2, args_size=2
+         0: return
+      LineNumberTable:
+        line 57: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: new           #10                 // class jvmgo/book/ch10/JvmsExample
+         3: dup
+         4: invokespecial #11                 // Method "<init>":()V
+         7: astore_1
+         8: aload_1
+         9: invokevirtual #12                 // Method catchOne:()V
+        12: aload_1
+        13: invokevirtual #13                 // Method catchTwo:()V
+        16: aload_1
+        17: invokevirtual #14                 // Method nestedCatch:()V
+        20: return
+      LineNumberTable:
+        line 60: 0
+        line 61: 8
+        line 62: 12
+        line 63: 16
+        line 64: 20
+}
+SourceFile: "JvmsExample.java"
+InnerClasses:
+     public static #16= #7 of #10; //TestExc2=class jvmgo/book/ch10/JvmsExample$TestExc2 of class jvmgo/book/ch10/JvmsExample
+     public static #18= #6 of #10; //TestExc1=class jvmgo/book/ch10/JvmsExample$TestExc1 of class jvmgo/book/ch10/JvmsExample
+     public static #19= #2 of #10; //TestExc=class jvmgo/book/ch10/JvmsExample$TestExc of class jvmgo/book/ch10/JvmsExample
